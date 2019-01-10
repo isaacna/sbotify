@@ -1,6 +1,3 @@
-when setting the export variables, don't actually include quotes in client id and secret 
-when asked for the redirect uri, raw copy the uri you were directed to 
-set redirect uri to localhost
 # sbotipy.py
 This is a reddit bot that fetches top daily song posts from the subreddit r/ListenToThis and generates a spotify playlist with those songs. Lots of great music is on the subreddit and this makes discovering new songs much easier. 
 

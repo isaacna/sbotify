@@ -1,5 +1,6 @@
 # sbotipy.py
-This is a reddit bot that fetches top daily song posts from the subreddit r/ListenToThis and generates a spotify playlist with those songs. Lots of great music is on the subreddit and this makes discovering new songs much easier. 
+This is a reddit bot that fetches top daily song posts from the subreddits r/ListenToThis and r/Music and generates a spotify playlist with those songs. 
+Lots of great music is on these subreddits, but posted as an inconvenient youtube link, and this makes discovering new songs much easier. 
 
 ## Requirements/Installation
 Praw: pip install praw  
@@ -13,13 +14,15 @@ export SPOTIPY_CLIENT_SECRET=''
 export SPOTIPY_REDIRECT_URI=http://localhost:8888/callback/  
 
 ## How To Use
-python sbotipy.py username numberOfSongs 
+python sbotipy.py username subreddit numberOfSongs flairFilter
 
 * specify the username you want to create the playlist for 
-* specify the number of songs you want to add from r/ListenToThis 
+* specify the subreddit (either ListenToThis or Music)
+* specify the number of songs you want to add 
+* specify the flair you want to filter by, this is optional (e.g. 'Music Streaming' flair for r/Music) 
   
 When you run the script for the first time, it will open an authentication portal in the browser, than redirect you to a url. Copy and paste that url into the command line like the script prompts.
 
 ### Example
-python sbotipy.py 'Isaac Na' 10
+python sbotipy.py 'Isaac Na' 'music' 10 'Music Streaming'
 

@@ -13,7 +13,7 @@ if len(sys.argv) > 3:
         optional_flair = None
 
 else:
-    print("Usage: %s username (number of tracks)" % (sys.argv[0]))
+    print("Usage: %s username subreddit (number of tracks) flair" % (sys.argv[0]))
     sys.exit()
 
 reddit = praw.Reddit('bot1')
@@ -74,8 +74,6 @@ def query_and_add_tracks(query, track_list, post):
     track_uri = search(query).get('tracks').get('items')[0].get('uri')
     track_list.append(str(track_uri))
     print("Adding " + query + " - " + str(track_uri))
-
-
 
 if __name__ == "__main__":
     create_playlist_from_tracks(user_id, playlist_id, get_tracks(number))

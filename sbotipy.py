@@ -42,9 +42,9 @@ def get_tracks(number):
         if count == number:
             return tracks
 
-        query = post.title.split('(')[0].split('[')[0]
-
         try: #try to get track uri from query json, only add count if successful
+            query = post.title.split('(')[0].split('[')[0]
+
             if optional_flair != None: 
                 if post.link_flair_text.lower()==optional_flair.lower():
                     query_and_add_tracks(query, tracks, post)
